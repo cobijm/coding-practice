@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class findMedianSortedArrays {
 
-	public static int[] findMedianSortedArrays(int[] nums1, int[] nums2) {
+	public static int[] findMSA(int[] nums1, int[] nums2) {
         int count = 0;
         for(int i = nums1[nums1.length - 1]; i < nums2.length; i++) {
             nums1[i] = nums2[count];
@@ -38,7 +38,7 @@ public class findMedianSortedArrays {
 		// TODO Auto-generated method stub
 		int[] arr1 = {1, 2, 8, 3};
 		int[] arr2 = {3};
-		System.out.println(Arrays.toString(findMedianSortedArrays(arr1, arr2)));
+		System.out.println(Arrays.toString(findMSA(arr1, arr2)));
 	}
 	public boolean closeFar(int a, int b, int c) {
 		  if((b - a) <= 1 && (Math.abs(c - a) > 1) && (Math.abs(c - b) > 1)) {

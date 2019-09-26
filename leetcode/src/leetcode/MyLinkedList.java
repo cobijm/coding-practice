@@ -1,7 +1,5 @@
 package leetcode;
 
-import reverseLinkedList.ReverseLinkedList.ListNode;
-
 public class MyLinkedList {
 
 	/** Initialize your data structure here. */

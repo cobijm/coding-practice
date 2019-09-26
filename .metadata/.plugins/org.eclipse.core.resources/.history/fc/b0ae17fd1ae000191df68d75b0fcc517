@@ -1,0 +1,72 @@
+package leetcode;
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+class Result {
+
+    // Complete the 'PrintGardenLayout' function below.
+
+    public static void PrintGardenLayout() {
+        Scanner scanner = new Scanner(System.in);
+
+        int x, y, fx, fy, wx, wy;
+        String mapSize = scanner.next();
+        String[] tokens = mapSize.split(",");
+        x = Integer.valueOf(tokens[0]);
+        y = Integer.valueOf(tokens[1]);
+        if(x == 0 && y == 0) {
+            System.exit(0);
+        } else {
+        while(scanner.hasNext()) {
+
+        String Flower = scanner.next();
+        String[] fTokens = Flower.split(",");
+        fx = Integer.valueOf(fTokens[1]);
+        fy = Integer.valueOf(fTokens[2]);
+
+        String Wall = scanner.next();
+        String[] wTokens = Wall.split(",");
+        wx = Integer.valueOf(wTokens[1]);
+        wy = Integer.valueOf(wTokens[2]);
+        }
+        
+        for(int i = 0; i < x; i++) {
+            for(int j = 0; j < y; j++) {
+                if(j == fx && i == fy) {
+                    System.out.print("F");
+                } else if(j == wx && i == wy) {
+                    System.out.print("W");
+                } else {
+                    System.out.print("B");
+                }
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+    // public String[] tokens(String s) {
+    //     String[] tokens = s.split(",");
+    //     return tokens;
+    // }
+
+}
+
+public class Solution {
+    
+    public static void main(String[] args) {
+
+        Result.PrintGardenLayout();
+
+    }
+}
