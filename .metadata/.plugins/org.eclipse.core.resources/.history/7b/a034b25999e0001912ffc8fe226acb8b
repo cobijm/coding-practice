@@ -1,0 +1,11 @@
+package leetcode;
+
+import random.Result;
+
+public class Solution {
+    public static void main(String[] args) {
+
+        Result.PrintGardenLayout();
+
+    }
+}
