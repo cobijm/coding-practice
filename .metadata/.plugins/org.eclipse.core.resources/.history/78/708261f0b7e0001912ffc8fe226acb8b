@@ -1,0 +1,17 @@
+package easy;
+
+public class LengthofLastWord {
+
+    public static int lengthOfLastWord(String s) {
+        StringBuilder str = new StringBuilder();
+        str.append(s);
+        System.out.println(str);
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String test = "Hello";
+		System.out.println(lengthofLastWord(str));
+
+	}
+
+}

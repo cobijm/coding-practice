@@ -1,0 +1,20 @@
+package random;
+
+public class Permutation {
+
+	public static boolean permutation(String a, String b) {
+		char[] aArr = a.toCharArray();
+		char[] bArr = b.toCharArray();
+		
+		if(aArr == bArr) {
+			return true;
+		}
+		return false;
+	}
+	public static void main(String[] args) {
+		String test1 = "Hello";
+		String test2 = "Nopes";
+		System.out.println(permutation(test1, test2));
+	}
+
+}

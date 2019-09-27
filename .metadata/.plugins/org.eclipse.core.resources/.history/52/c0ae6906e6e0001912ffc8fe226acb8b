@@ -1,0 +1,27 @@
+package random;
+
+import java.util.Arrays;
+
+public class Permutation {
+
+	public static boolean permutation(String a, String b) {
+		char[] aArr = a.toCharArray();
+		char[] bArr = b.toCharArray();
+		
+		Arrays.sort(aArr);
+		Arrays.sort(bArr);
+		
+		System.out.println(aArr);
+		System.out.println(bArr);
+		if(aArr.equals(bArr)) {
+			return true;
+		}
+		return false;
+	}
+	public static void main(String[] args) {
+		String test1 = "eikooc";
+		String test2 = "cookie";
+		System.out.println(permutation(test1, test2));
+	}
+
+}
