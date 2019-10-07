@@ -1,0 +1,21 @@
+package random;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class cs311hw3q2 {
+
+	public static int[] sortKsort(int [] kSorted) {
+		
+	}
+	
+	public static List<Integer, Integer> q3(List<Integer, Integer> S) {
+		Map<Integer, Integer> purples = new HashMap<>();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

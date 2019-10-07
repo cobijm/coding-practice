@@ -1,7 +1,5 @@
 package sortingAndSearching;
 
-import java.util.Arrays;
-
 public class MergeSort {
 
 	// Merges two subarrays of arr[]. 
@@ -97,9 +95,15 @@ public class MergeSort {
 	}
 
 	public static void main(String[] args) {
-		int[] test = { 5, 4, 3, 6, 1, 2, 1, 1 };
-		System.out.println(Arrays.toString(test));
-//		merge(test);
-		System.out.println(Arrays.toString(test));
+		int arr[] = {12, 11, 13, 5, 6, 7}; 
+		  
+        System.out.println("Given Array"); 
+        printArray(arr); 
+  
+        MergeSort ob = new MergeSort(); 
+        ob.sort(arr, 0, arr.length-1); 
+  
+        System.out.println("\nSorted array"); 
+        printArray(arr);
 	}
 }
