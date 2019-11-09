@@ -1,0 +1,34 @@
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class StringPalindrome {
+	
+	public static boolean isPalindrome(String s) {
+		Map<Character, Integer> charSet = new HashMap<>();
+        for(int i = 0; i < s.length(); i++){
+            char temp = s.charAt(i);
+            if(Character.isLetter(s.charAt(i))) {
+                charSet.put(Character.toLowerCase(temp), charSet.getOrDefault(Character.toLowerCase(temp), 0));
+            }
+        }
+        int oneCharAllowed = 1;
+        for(Integer val : charSet.values()) {
+        	if(val == 1) {
+        		oneCharAllowed--;
+        	}
+        	if(oneCharAllowed == 0) {
+        		return false;
+        	}
+        }
+        return true;
+    }
+	
+	public static void main(String[] args) {
+		String test = "race a car";
+		System.out.println(isPalindrome(test));
+
+	}
+
+}
