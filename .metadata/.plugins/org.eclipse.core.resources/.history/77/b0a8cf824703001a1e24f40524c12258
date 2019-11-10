@@ -1,0 +1,32 @@
+package strings;
+
+import java.util.Arrays;
+
+public class ReverseInteger {
+	public static int reverse(int x) {
+		
+		String temp = Integer.toString(x);
+		boolean isNegative = false;
+		int[] intArr = new int[temp.length()];
+		int startAt = 0;
+		
+		if(temp.charAt(0) == '-') {
+			isNegative = true;
+			startAt = 1;
+		}
+		
+		for (int i = startAt; i < temp.length(); i++) {
+			intArr[i] = temp.charAt(i) - '0';
+		}
+		System.out.println(Arrays.toString(intArr));
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		int test = -123;
+		
+		System.out.println(reverse(test));
+
+	}
+
+}
