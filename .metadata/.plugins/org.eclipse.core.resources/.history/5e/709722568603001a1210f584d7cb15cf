@@ -1,0 +1,50 @@
+package sortingandsearching;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class MergeSortedArray {
+
+	public static void merge(int[] nums1, int m, int[] nums2, int n) {
+		ArrayList<Integer> sorted = new ArrayList<>();
+		int count1 = 0;
+		int count2 = 0;
+		while(n != 0 && m != 0) {
+			if(nums1[count1] <= nums2[count2]) {
+				sorted.add(nums1[count1]);
+				count1++;
+				m--;
+			} else {
+				sorted.add(nums2[count2]);
+				count2++;
+				n--;
+			}
+		}
+		if(m > 0) {
+			for(int i = count1; m != 0; i++) {
+				sorted.add(nums1[i]);
+				m--;
+			}
+		}
+		if(n > 0) {
+			for(int i = count2; n != 0; i++) {
+				sorted.add(nums2[i]);
+				n--;
+			}
+		}
+		int[] result = new int[sorted.size()];
+		for(int i = 0; i < sorted.size(); i++) {
+			result[i] = sorted.get(i);
+		}
+		System.out.println(Arrays.toString(result));
+		nums1 = result.clone();
+	}
+	public static void main(String[] args) {
+		int[] test1 = {1,2,3,0,0,0};
+		int[] test2 = {2,5,6};
+		merge(test1, 3, test2, 3);
+		System.out.println(Arrays.toString(test1));
+
+	}
+
+}

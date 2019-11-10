@@ -49,8 +49,6 @@ public class PalindromeLinkedList {
 		ListNode runner = head;
 		ListNode secondHalf = head;
 		boolean isOdd = false;
-		
-		//two pointer method, secondHalf ends at the halfway point
 		while (runner != null) {
 			if (runner.next == null) {
 				isOdd = true;
@@ -60,13 +58,9 @@ public class PalindromeLinkedList {
 			secondHalf = secondHalf.next;
 			runner = runner.next.next;
 		}
-		
-		//if the linkedlist has an odd amount of nodes, account for it
 		if (isOdd) {
 			secondHalf = secondHalf.next;
 		}
-		
-		//compare first half(stack) with second half of the linked list
 		while (secondHalf != null) {
 			if (secondHalf.val != firstHalf.peek()) {
 				return false;
