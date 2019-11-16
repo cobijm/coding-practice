@@ -1,0 +1,34 @@
+package medium;
+
+import java.util.HashSet;
+
+public class LengthOfLongestSubstring {
+
+	public static int lengthOfLongestSubstring(String s) {
+		
+		if(s == null) {
+			return 0;
+		}
+		
+		HashSet<Character> charSet = new HashSet<>();
+		int high = 0;
+		
+		for(int i = 0; i < s.length(); i++) {
+			char temp = s.charAt(i);
+			if(charSet.contains(temp)) {
+				if(charSet.size() > high) {
+					high = charSet.size();
+				}
+				charSet.clear();
+			}
+			charSet.add(temp);
+		}
+		return Math.max(charSet.size(), high);
+	}
+
+	public static void main(String[] args) {
+		String test = " ";
+		System.out.println(lengthOfLongestSubstring(test));
+	}
+
+}
