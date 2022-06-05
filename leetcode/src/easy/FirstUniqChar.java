@@ -1,13 +1,14 @@
 package easy;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /*
  */
 public class FirstUniqChar {
 
-    public int firstUniqChar(String s) {
+    public static int firstUniqChar(String s) {
         HashSet<Character> set = new HashSet<>();
         for(int i = 0; i < s.length(); i++) {
             set.add(s.charAt(i));

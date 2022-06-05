@@ -65,7 +65,6 @@ public class AddTwoNumbers {
 		System.out.println("First: " + toStr(test));
 		System.out.println("Second: " + toStr(test1));
 		System.out.println("Added: " + toStr(x.addTwoNumbers(test, test1)));
-
 	}
 
 }
