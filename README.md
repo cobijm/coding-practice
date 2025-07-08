@@ -1,2 +1,3 @@
 # CodingPractice
-Documenting my journey into the world of LeetCode
+leetcode problems
+python and java
