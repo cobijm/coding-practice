@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;sortingAndSearching.SelectionSort&apos; to &apos;BubbleSort&apos;&#x0A;- Original project: &apos;CtCi&apos;&#x0A;- Original element: &apos;sortingAndSearching.SelectionSort&apos;&#x0A;- Renamed element: &apos;sortingAndSearching.BubbleSort&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SelectionSort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sortingAndSearching{SelectionSort.java[SelectionSort" matchStrategy="1" name="BubbleSort" qualified="false" references="true" similarDeclarations="false" stamp="1552863354470" textual="false" version="1.0"/>
-</session>
